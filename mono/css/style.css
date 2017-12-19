@@ -7665,6 +7665,15 @@ button.close {
   background: black;
   background: -webkit-linear-gradient(0deg, black, #282828);
   background: linear-gradient(0deg, #000000, #282828);
+  -webkit-box-shadow: 0px 0px 3px 2px black;
+  -moz-box-shadow: 0px 0px 3px 2px black;
+  box-shadow: 0px 0px 3px 2px black;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.header-inner-right-btn:hover {
+  opacity: 1;
 }
 
 .header-inner-right-btn h3 {
@@ -7674,15 +7683,27 @@ button.close {
 
 .btn-1 {
   float: left;
+  color: rgba(62, 189, 65, 0.7);
+}
+
+.btn-1:hover {
   color: #3ebd41;
 }
 
 .btn-2 {
+  color: rgba(33, 158, 229, 0.7);
+}
+
+.btn-2:hover {
   color: #219ee5;
 }
 
 .btn-3 {
   float: right;
+  color: rgba(212, 210, 54, 0.7);
+}
+
+.btn-3:hover {
   color: #d4d236;
 }
 

@@ -78,6 +78,13 @@ $menu-btn-gradient: #000000, #151414;
 	background: black;
 	background: -webkit-linear-gradient(0deg, $head-foot-gradient);
 	background: linear-gradient(0deg, $head-foot-gradient);
+	@include box-shadow(0px, 0px, 3px, 2px, black, false);
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+.header-inner-right-btn:hover{
+	opacity: 1;
 }
 
 .header-inner-right-btn h3{
@@ -87,16 +94,28 @@ $menu-btn-gradient: #000000, #151414;
 
 .btn-1{
 	float: left;
-	color: #3ebd41;
+	color: rgba(62, 189, 65, 0.7);
+}
+
+.btn-1:hover{
+	color: rgba(62, 189, 65, 1);
 }
 
 .btn-2{
-	color: #219ee5;
+	color: rgba(33, 158, 229, 0.7);
+}
+
+.btn-2:hover{
+	color: rgba(33, 158, 229, 1);
 }
 
 .btn-3{
 	float: right;
-	color: #d4d236;
+	color: rgba(212, 210, 54, 0.7);;
+}
+
+.btn-3:hover{
+	color: rgba(212, 210, 54, 1);
 }
 
 .hero-container{
