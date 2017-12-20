@@ -17,6 +17,7 @@
 
 $head-foot-gradient: #000000, #282828;
 $menu-btn-gradient: #000000, #151414;
+$sec-2-gradient: #000000, #201f1f;
 
 @mixin box-shadow($top, $left, $blur, $spread, $color, $inset:false){
 	@if $inset{
@@ -31,7 +32,6 @@ $menu-btn-gradient: #000000, #151414;
 }
 
 .header-container{
-	background: black;
 	background: -webkit-linear-gradient(180deg, $head-foot-gradient);
 	background: linear-gradient(180deg, $head-foot-gradient);
 	width: 100%;
@@ -75,7 +75,6 @@ $menu-btn-gradient: #000000, #151414;
 	width: 25%;
 	height: 115px;
 	display: inline-block;
-	background: black;
 	background: -webkit-linear-gradient(0deg, $head-foot-gradient);
 	background: linear-gradient(0deg, $head-foot-gradient);
 	@include box-shadow(0px, 0px, 3px, 2px, black, false);
@@ -159,7 +158,6 @@ $menu-btn-gradient: #000000, #151414;
 	text-shadow: 2px 2px black;
 	padding-left: 30px;
 	padding-right: 30px;
-	background: black;
 	background: -webkit-linear-gradient(180deg, #323030, #0f0f0f);
 	background: linear-gradient(180deg, #323030, #0f0f0f);
 	@include box-shadow(0px, 0px, 1px, 0px, white, true);
@@ -179,8 +177,6 @@ $menu-btn-gradient: #000000, #151414;
 	width: 100%;
 	height: 80%;
 	margin-top: 10%;
-	/*background: rgba(0, 0, 0, 0.76);
-	border-radius: 20px;*/
 	position: relative;
 }
 
@@ -200,10 +196,125 @@ $menu-btn-gradient: #000000, #151414;
 	background: white;
 	height: 2300px;
 	@include box-shadow(0px, 0px, 20px, 5px, black, null);
+	padding: 0;
+}
+
+.sec-main{
+	height: 448px;
+	margin-left: 0;
+	margin-top: 10px;
+	background-color: blue;
+}
+
+.sec-1-nsl, .sec-2-nsl{
+	background-color: rgba(86, 148, 205, 0.76);
+	margin-top: 15px;
+}
+
+.sec-3-nsl, .sec-5-nsl{
+	background-color: rgba(133, 13, 13, 0.76);
+	margin-top: 15px;
+}
+
+.sec-1-nsl h1, .sec-2-nsl h1, .sec-3-nsl h1, .sec-5-nsl h1{
+	font-family: BebasNeue;
+	font-size: 45px;
+	letter-spacing: 7px;
+	color: white;
+	text-align: center;
+	text-shadow: 2px 2px black;
+}
+
+.sec2, .sec4, .sec5{
+	background: -webkit-linear-gradient(0deg, $sec-2-gradient);
+	background: linear-gradient(0deg, $sec-2-gradient);
+	padding: 0;
+}
+
+.sec1{
+	background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../img/sec1bg.jpg") no-repeat center center;
+	object-fit: cover;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	padding: 0;
+	overflow: hidden;
+}
+
+.sec-1-row-left{
+	width: 50%;
+	height: 300px;
+	margin-top: 25px;
+}
+
+.sec-1-row-left h2{
+	font-family: JosefinSlabRegular;
+	font-size: 35px;
+	color: white;
+	line-height: 45px;
+	margin-left: 90px;
+	margin-top: 20px;
+}
+
+.sec-1-row-right{
+	width: 50%;
+	height: 300px;
+	margin-top: 25px;
+}
+
+.sec-1-row-right h2{
+	font-family: JosefinSlabRegular;
+	font-size: 35px;
+	color: white;
+	line-height: 45px;
+	margin-left: 20px;
+	margin-right: 70px;
+	margin-top: 20px;
+}
+
+.video-btn{
+	color: rgba(255, 255, 255, 0.5);
+	text-shadow: 2px 2px black;
+	padding-left: 20px;
+	padding-right: 20px;
+	background: -webkit-linear-gradient(180deg, #074490, #033e60);
+	background: linear-gradient(180deg, #074490, #033e60);
+	@include box-shadow(0px, 0px, 1px, 0px, white, true);
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	float: right;
+	opacity: 0.7;
+	margin-right: 100px;
+	margin-top: 15px;
+}
+
+.video-btn h3{
+	font-family: JosefinSlabBold;
+	font-size: 20px;
+	vertical-align: middle;
+	display: inline-block;
+	margin: 0;
+	margin-top: 2px;
+}
+
+.video-btn:hover{
+	color: rgba(255, 255, 255, 1);
+	border: 1px solid rgba(255, 255, 255, 1);
+	@include box-shadow(0px, 0px, 10px, 0px, black, true);
+	opacity: 1;
+}
+
+.sec3{
+	background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../img/sec3bg.jpg") no-repeat center center;
+	object-fit: cover;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	padding: 0;
 }
 
 .footer-container{
-	background: black;
 	background: -webkit-linear-gradient(0deg, $head-foot-gradient);
 	background: linear-gradient(0deg, $head-foot-gradient);
 	width: 100%;
@@ -257,7 +368,7 @@ $menu-btn-gradient: #000000, #151414;
 	font-family: BebasNeue;
 	font-size: 25px;
 	color: white;
-	margin-left: 10px;
+	margin-left: 50px;
 	margin-top: 30px;
 }
 
