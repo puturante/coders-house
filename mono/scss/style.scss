@@ -232,7 +232,7 @@ $sec-2-gradient: #000000, #201f1f;
 }
 
 .sec1{
-	background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../img/sec1bg.jpg") no-repeat center center;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/sec1bg.jpg") no-repeat center center;
 	object-fit: cover;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
@@ -274,7 +274,7 @@ $sec-2-gradient: #000000, #201f1f;
 }
 
 .video-btn{
-	color: rgba(255, 255, 255, 0.5);
+	color: white);
 	text-shadow: 2px 2px black;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -298,20 +298,34 @@ $sec-2-gradient: #000000, #201f1f;
 }
 
 .video-btn:hover{
-	color: rgba(255, 255, 255, 1);
 	border: 1px solid rgba(255, 255, 255, 1);
 	@include box-shadow(0px, 0px, 10px, 0px, black, true);
 	opacity: 1;
 }
 
+.sec-2-col{
+	margin: 0 auto;
+	background: red;
+}
+
+.sec-2-col h2{
+	color: white;
+}
+
 .sec3{
-	background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../img/sec3bg.jpg") no-repeat center center;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/sec3bg.jpg") no-repeat center center;
 	object-fit: cover;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 	padding: 0;
+}
+
+.sec-3-text{
+	width: 100%;
+	height: 300px;
+	background-color: blue;
 }
 
 .footer-container{
