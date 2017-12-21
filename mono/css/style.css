@@ -7765,6 +7765,28 @@ button.close {
   box-shadow: inset 0px 0px 10px 0px black;
 }
 
+#opsPopUp{
+	max-width: 800px;
+	max-height: 600px;
+	margin-top: 35px;
+	padding: 0;
+	display: none;
+	background: -webkit-linear-gradient(180deg, #074490, #033e60);
+	background: linear-gradient(180deg, #074490, #033e60);
+}
+
+#opsPopUp h2{
+	font-family: Georgia;
+	color: white;
+	font-size: 25px;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 45px;
+	line-height: 40px;
+	text-align: justify;
+	hyphens: auto;
+}
+
 .hero-right-container {
   width: 100%;
   height: 80%;
@@ -7881,7 +7903,7 @@ button.close {
   box-shadow: inset 0px 0px 1px 0px white;
   border: 1px solid rgba(255, 255, 255, 0.5);
   float: right;
-  opacity: 0.7;
+  opacity: 0.8;
   margin-right: 100px;
   margin-top: 15px;
 }
@@ -7903,6 +7925,28 @@ button.close {
   -moz-box-shadow: inset 0px 0px 10px 0px black;
   box-shadow: inset 0px 0px 10px 0px black;
   opacity: 1;
+}
+
+#popUpVideo{
+	width: 100%;
+	height: 100vh;
+	margin: 0 auto;
+	z-index: 1001;
+	position: fixed;
+	display: none;
+}
+
+#innerPopUp{
+	max-width: 800px;
+	max-height: 600px;
+	margin-top: 35px;
+	padding: 0;
+	display: none;
+}
+
+.close-btn{
+	font-size: 20px;
+	float: right;
 }
 
 .sec-2-col{

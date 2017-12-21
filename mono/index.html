@@ -13,7 +13,16 @@
   </head>
   
   <body>
-  
+	<div class="container" id="popUpVideo">
+		<div class="container" id="innerPopUp">
+			<button type="button" class="btn btn-danger close-btn" onclick="sakVideo();">X</button>
+			<iframe src="http://www.youtube.com/embed/cwHRegcjasg" width="800" height="600" frameborder="0" style="padding: 0;" allowfullscreen></iframe>
+		</div>
+		<div class="container" id="opsPopUp">
+			<button type="button" class="btn btn-danger close-btn" onclick="sakOpsirnije();">X</button>
+			<h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h2>
+		</div>
+	</div>
 	<header>
 		<div class="container header-container">
 			<div class="container header-container-background">
@@ -22,21 +31,32 @@
 					<h1>kuglanje u monu</h1>
 				</div>
 				<div class="container header-inner-right">
-					<div class="container header-inner-right-btn btn-1">
+					<div class="container header-inner-right-btn btn-1" onclick="naslovnica();">
 						<object class="naslovnica" type="image/svg+html" data="img/svg-icons/home.svg" style="width: 50px; height: 50px; margin-top: 10px;"></object>
 						<h3>Naslovnica</h3>
 					</div>
-					<div class="container header-inner-right-btn btn-2">
+					<div class="container header-inner-right-btn btn-2" onclick="obowlingu();">
 						<object class="obowlingu" type="image/svg+html" data="img/svg-icons/bowling.svg" style="width: 50px; height: 50px; margin-top: 10px;"></object>
 						<h3>O Bowlingu</h3>
 					</div>
-					<div class="container header-inner-right-btn btn-3">
+					<div class="container header-inner-right-btn btn-3" onclick="onama();">
 						<object class="onama" type="image/svg+html" data="img/svg-icons/info.svg" style="width: 50px; height: 50px; margin-top: 10px;"></object>
 						<h3>O nama</h3>
 					</div>
 				</div>
 			</div>
 		</div>
+		<script>
+			function naslovnica(){
+				alert("index.html");
+			}
+			function obowlingu(){
+				alert("obowlingu.html");
+			}
+			function onama(){
+				alert("onama.html");
+			}
+		</script>
 	</header>
 	
 	<section>
@@ -46,7 +66,7 @@
 					<div class="col-md-6 hero-row">
 						<div class="container hero-left-container">
 							<h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</h2>
-							<button type="button" id="opsirnije" class="btn opsirnije-btn">Opsirnije</button>
+							<button type="button" id="opsirnije" class="btn opsirnije-btn" onclick="pokOpsirnije();">Opsirnije</button>
 						</div>
 					</div>
 					<div class="col-md-6 hero-row">
@@ -71,10 +91,30 @@
 					</div>
 					<div class="col-md-6 sec-1-row-right">
 						<h2>- sve sto ti treba je dobra volja, u nasem bowling centru imamo sve ostalo</h2>
-						<button type="button" id="pog-video" class="btn video-btn"><h3>Video</h3><object class="video-svg" type="image/svg+html" data="img/svg-icons/play.svg" style="width: 30px; height: 30px; margin-left: 10px; vertical-align: middle;"></object></button>
+						<button type="button" id="pog-video" class="btn video-btn" onclick="pokVideo();"><h3>Video</h3><object class="video-svg" type="image/svg+html" data="img/svg-icons/play.svg" style="width: 30px; height: 30px; margin-left: 10px; vertical-align: middle;"></object></button>
 					</div>
 				</div>
 			</div>
+			<script>
+				function pokVideo(){
+					document.getElementById("popUpVideo").style.display = "block";
+					document.getElementById("innerPopUp").style.display = "block";
+				}
+				
+				function sakVideo(){
+					document.getElementById("popUpVideo").style.display = "none";
+					document.getElementById("innerPopUp").style.display = "none";
+				}
+				function pokOpsirnije(){
+					document.getElementById("popUpVideo").style.display = "block";
+					document.getElementById("opsPopUp").style.display = "block";
+				}
+				
+				function sakOpsirnije(){
+					document.getElementById("popUpVideo").style.display = "none";
+					document.getElementById("opsPopUp").style.display = "none";
+				}
+			</script>
 			<div class="container sec-main sec2">
 				<div class="container sec-2-nsl">
 					<h1>i mnoge hollywoodske zvijezde kuglaju</h1>
@@ -112,7 +152,7 @@
 					<div class="col-md-6">
 						<div class="container sec-4-left-bg">
 							<h2>prijavite se za školu kuglanja</h2>
-							<form>
+							<form id="optSel">
 							<div class="form-group">
 								<label for="ime-prezime"><h3>Vaše ime i prezime</h3></label>
 								<input type="text" class="form-control" id="ime-prezime">
@@ -129,26 +169,49 @@
 								<div class="form-check">
 									<label class="form-check-label">
 										<h4>Djeca (do 16 godina)</h4>
-										<input class="form-check-input form-radio-main" type="radio" name="exampleRadios" id="opt1" value="option1" checked>
+										<input class="form-check-input form-radio-main" type="radio" name="izbor" id="opt1" value="Djeca (do 16 godina)" checked>
 									</label>
 									</div>
 								<div class="form-check">
 									<label class="form-check-label">
 										<h4>Mladi (do 26 godina)</h4>
-										<input class="form-check-input form-radio-main" type="radio" name="exampleRadios" id="opt2" value="option2">
+										<input class="form-check-input form-radio-main" type="radio" name="izbor" id="opt2" value="Mladi (do 26 godina)">
 									</label>
 								</div>
 								<div class="form-check">
 									<label class="form-check-label">
 										<h4>Stariji (od 26 godina)</h4>
-										<input class="form-check-input form-radio-main" type="radio" name="exampleRadios" id="opt3" value="option3">
+										<input class="form-check-input form-radio-main" type="radio" name="izbor" id="opt3" value="Stariji (od 26 godina)">
 									</label>
 								</div>
 							</div>
 							</form>
-							<button type="submit" class="btn sec-4-btn sec-4-btn-left"><object class="video-svg" type="image/svg+html" data="img/svg-icons/signin.svg" style="width: 20px; height: 20px; margin-right: 10px; vertical-align: middle;"></object>Prijavi se</button>
+							<button type="submit" class="btn sec-4-btn sec-4-btn-left" onclick="skola();"><object class="video-svg" type="image/svg+html" data="img/svg-icons/signin.svg" style="width: 20px; height: 20px; margin-right: 10px; vertical-align: middle;"></object>Prijavi se</button>
 						</div>
 					</div>
+					<script>
+						function skola(){
+							var imeprez = document.getElementById("ime-prezime").value;
+							var email = document.getElementById("e-mail").value;
+							var broj = document.getElementById("broj").value;
+							
+							var izbor = document.getElementsByName("izbor");
+
+							for (var i = 0, length = izbor.length; i < length; i++)
+							{
+							 if (izbor[i].checked)
+							 {
+							  // do whatever you want with the checked radio
+							  var selizbor = izbor[i].value;
+
+							  // only one radio can be logically checked, don't check the rest
+							  break;
+							 }
+							}
+							
+							alert ("Ime i prezime: " + imeprez + "\n\n" + "E-mail: " + email + "\n\n" + "Kontakt broj: " + broj + "\n\n" + "Odabrana opcija: " + selizbor);
+						}
+					</script>
 					<div class="col-md-6">
 						<div class="container sec-4-right-bg">
 							<h2>pretplatite se na newsletter</h2>
@@ -165,19 +228,40 @@
 							<div class="form-check chc">
 								<label class="form-check-label">
 								<h4>Popusti</h4>
-								<input type="checkbox" class="form-check-input">
+								<input type="checkbox" class="form-check-input" name="chcbox" value="Popusti">
 								</label>
 							</div>
 							<div class="form-check chc">
 								<label class="form-check-label">
 								<h4>Novosti</h4>
-								<input type="checkbox" class="form-check-input">
+								<input type="checkbox" class="form-check-input" name="chcbox" value="Novosti">
 								</label>
 							</div>
 							</form>
-							<button type="submit" class="btn sec-4-btn sec-4-btn-right"><object class="video-svg" type="image/svg+html" data="img/svg-icons/email.svg" style="width: 20px; height: 20px; margin-right: 10px; vertical-align: middle;"></object>Pretplati se</button>
+							<button type="submit" class="btn sec-4-btn sec-4-btn-right" onclick="news();"><object class="video-svg" type="image/svg+html" data="img/svg-icons/email.svg" style="width: 20px; height: 20px; margin-right: 10px; vertical-align: middle;"></object>Pretplati se</button>
 						</div>
 					</div>
+					<script>
+						function news(){
+							var imeprez = document.getElementById("ime-prezime").value;
+							var email = document.getElementById("e-mail").value;						
+
+							var checkboxes = document.getElementsByName('chcbox');
+							var vals = "";
+							for (var i=0, n=checkboxes.length;i<n;i++) 
+							{
+								if (checkboxes[i].checked) 
+								{
+									vals += ","+checkboxes[i].value;
+								}
+							}
+							if (vals) vals = vals.substring(1);
+
+
+							
+							alert ("Ime i prezime: " + imeprez + "\n\n" + "E-mail: " + email + "\n\n" + "Odabrana opcija: " + vals);
+						}
+					</script>
 				</div>
 			</div>
 			<div class="container sec-main sec5">
@@ -207,9 +291,9 @@
 					<div class="col-md-6 footer-row">
 						<div class="container footer-left-container">
 							<h1>pratite nas na društvenim mrežama</h1>
-							<img src="img/svg-icons/facebook.svg" style="width: 50px; height: 50px; margin-left: 50px; margin-top: 15px;"><h2>Facebook</h2></img>
+							<a href="http://www.facebook.com"><img src="img/svg-icons/facebook.svg" style="width: 50px; height: 50px; margin-left: 50px; margin-top: 15px;"><h2>Facebook</h2></img></a>
 							<br><br>
-							<img src="img/svg-icons/instagram.svg" style="width: 50px; height: 50px; margin-left: 50px; margin-top: 15px;"><h2>Instagram</h2></img>
+							<a href="https://www.instagram.com"><img src="img/svg-icons/instagram.svg" style="width: 50px; height: 50px; margin-left: 50px; margin-top: 15px;"><h2>Instagram</h2></img></a>
 						</div>
 					</div>
 					<div class="col-md-6 footer-row">
